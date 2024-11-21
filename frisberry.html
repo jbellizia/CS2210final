@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tbody, thead, tr, td{
+            border: solid black 1px;
+            border-collapse: collapse;
+        }
+
+        #captures-table-div{
+            float: right
+        }
+        #sessions-table-div{
+            float: left
+        }
+    </style>
+</head>
+<body>
+    <title>Frisberry Pi Data Page</title>
+    <h1>Frisberry Data</h1>
+    <div id = "sessions-table-div">
+        <h2>Capture Sessions</h2>
+        <table >
+            <thead>
+                <tr>
+                    <th>Session ID</th>
+                    <th>Capture ID</th>
+                    <th>Capture insertion datetime</th>
+                </tr>
+            </thead>
+
+            <tbody id = "capture-sessions">
+
+            </tbody>
+        </table>
+        <button id = "refresh-button">Refresh Table</button>
+    </div>
+    <div id = "captures-table-div">
+        <table>
+            <h2>Session Data</h2>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Capture ID</th>
+                    <th>Time from start of session</th>
+                    <th>Acceleration Magnitude (M/s^2)</th>
+                    <th>Gyroscopic Magnitude (Deg/s)</th>
+                </tr>
+            </thead>
+
+            <tbody id="captures-table">
+                <!--this is where table will be updated-->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/static/accel-gyro-chart.js"></script>
+
+</body>
+</html>
