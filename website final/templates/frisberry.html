@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrisberryPi Data Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f4fa;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #0066cc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0066cc;
+            color: #fff;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        #sessions-table-div, #captures-table-div {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frisberry Data</h1>
+    <div id="sessions-table-div">
+        <h2>Capture Sessions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Session ID</th>
+                    <th>Capture ID</th>
+                    <th>Capture Insertion Datetime</th>
+                </tr>
+            </thead>
+            <tbody id="capture-sessions"></tbody>
+        </table>
+        <button id="refresh-button">Refresh Table</button>
+    </div>
+    <div id="captures-table-div">
+        <h2>Session Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Capture ID</th>
+                    <th>Time from Start of Session</th>
+                    <th>Acceleration Magnitude (m/s²)</th>
+                    <th>Gyroscopic Magnitude (deg/s)</th>
+                </tr>
+            </thead>
+            <tbody id="captures-table"></tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/static/accel-gyro-chart.js"></script>
+</body>
+</html>
